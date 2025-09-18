@@ -1,5 +1,5 @@
-#ifndef Horse_H_EXIST
-#define Horse_H_EXIST
+#ifndef Horse_H_EXISTS
+#define Horse_H_EXISTS
 
 class Horse {
 	private:
