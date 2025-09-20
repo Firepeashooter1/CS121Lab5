@@ -1,5 +1,5 @@
-#ifndef Race_H_EXISTS
-#define Race_H_EXIST
+#ifndef Race_H
+#define Race_H
 
 #include "Horse.h"
 

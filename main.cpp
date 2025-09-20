@@ -1,5 +1,7 @@
-#include <iostream>
+#include "Race.h"
 
 int main() {
-	std::cout << "Hello World";
+    Race race;
+    race.run();
+    return 0;
 }//End main
