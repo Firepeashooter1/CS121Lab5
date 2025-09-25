@@ -91,10 +91,12 @@ bool Race::checkWinners() const {
 void Race::display() const {
     std::cout << "\nCurrent Race Status:\n";
     for (int i = 0; i < NUM_HORSES; ++i) {
-        std::cout << "Horse " << i + 1 << ": ";
-        for (int j = 0; j < horses[i].getPosition(); ++j) {
-            std::cout << "-";
-        }//End for j
+
+        if (i != horses[i].getPosition()) {
+		std::cout << "-";
+        } else {
+		std::cout << i + 1;
+	}//End else-if
         std::cout << ">\n";
     }//End for i
 
