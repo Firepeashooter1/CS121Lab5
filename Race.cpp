@@ -45,38 +45,48 @@
 
 Race::Race() {
     srand(static_cast<unsigned int>(time(nullptr)));
-}
+}//End Race Race
 
 void Race::run() {
+
     while (!checkWinners()) {
         update();
         display();
         std::cout << "Press Enter to continue...\n";
         std::cin.get();
-    }
+    }//End while
 
     std::cout << "\n🏁 Race Finished! Winner(s):\n";
+
     for (int i = 0; i < NUM_HORSES; ++i) {
+
         if (horses[i].hasWon(TRACK_LENGTH)) {
             std::cout << "Horse " << i + 1 << "!\n";
-        }
-    }
-}
+        }//End if
+
+    }//End for i
+
+}//End void Race run
 
 void Race::update() {
+
     for (int i = 0; i < NUM_HORSES; ++i) {
         horses[i].advance();
-    }
-}
+    }//End for i
+     
+}//End Race update
 
 bool Race::checkWinners() const {
+
     for (int i = 0; i < NUM_HORSES; ++i) {
+
         if (horses[i].hasWon(TRACK_LENGTH)) {
             return true;
-        }
-    }
+        }//End if
+
+    }//End for i
     return false;
-}
+}//End bool Race checkWinner const
 
 void Race::display() const {
     std::cout << "\nCurrent Race Status:\n";
@@ -84,8 +94,8 @@ void Race::display() const {
         std::cout << "Horse " << i + 1 << ": ";
         for (int j = 0; j < horses[i].getPosition(); ++j) {
             std::cout << "-";
-        }
+        }//End for j
         std::cout << ">\n";
-    }
-}
-}
+    }//End for i
+
+}//End void Race display const

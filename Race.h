@@ -35,7 +35,7 @@ public:
     void display() const;
     bool checkWinners() const;
     void update();
-};
+};//End Race class
 
 #endif
 

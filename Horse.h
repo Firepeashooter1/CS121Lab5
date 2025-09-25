@@ -30,4 +30,4 @@ class Horse {
 		void advnace();
 		void printLane();
 		void isWinner();
-};//End class def
+};//End Horse class

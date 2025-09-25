@@ -16,15 +16,17 @@
 Horse::Horse() : position(0) {}
 
 void Horse::advance() {
+
     if (rand() % 2 == 0) {
         position++;
-    }
-}
+    }//End if
+
+}//End void Horse advance
 
 int Horse::getPosition() const {
     return position;
-}
+}//End int Horse getPosition const
 
 bool Horse::hasWon(int trackLength) const {
     return position >= trackLength;
-}
+}//End bool Horse hasWom int trackLength const
